@@ -42,13 +42,13 @@ p, li {
   height: 55px;
   width: 55px;
   margin-top: 25px;
-  transition: 400ms ease;
+  transition: 0.3 ease;
 }
 
 #menu{
   height: 100px;
   width: 100px;
-  transition: 400ms ease;
+  transition: 0.3s ease-out;
 }
 
 .topbar {
@@ -97,15 +97,79 @@ p, li {
   transition: height 0.3s ease-in;
 }
 
-.menu li a {
-  display: block;
-  padding: 10px;
-  color: #3d4d25;
-  text-decoration: none;
+@media screen and (max-width: 768px) {
+	.menu.open {
+	  flex-direction: column;
+    height: 60vh;
+    padding-top: 5vh;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+	}
 }
 
-.menu li a:hover {
-  background-color: #555;
+.menu li a{
+  display: none;
+}
+
+.menu.open li a {
+  color: #3d4d25;
+  transition: ease 400ms;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  padding: 15px;
+  position: relative;
+}
+
+.menu li a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  background: #3d4d25;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.menu li a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+
+#ds-logo{
+  transition: ease 400ms;
+  cursor: pointer;
+}
+
+#ds-logo:hover {
+  opacity: 50%;
+}
+
+@media screen and (max-width: 768px) {
+
+  .topbar{
+    padding-top: 30px;
+  }
+
+  #ds-logo, #close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #ds-logo{
+    height: 4em;
+  }
+
+  #close{
+    margin-top: 0;
+    height: 2.5em;
+  }
 }
 
 /*Home Page*/
@@ -130,4 +194,8 @@ p, li {
     margin: 0;
   }
 }
+
+
+
+/*Gifts Page*/
 
