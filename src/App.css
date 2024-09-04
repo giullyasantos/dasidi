@@ -24,7 +24,6 @@ p, li {
 
 /*NavBar*/
 /* Style for the navigation bar */
-/* Style for the navigation bar */
 .navbar {
   position: fixed;
   top: 0;
@@ -32,19 +31,45 @@ p, li {
   z-index: 1000;
   background-color: transparent;
   transition: background-color 0.3s ease;
+
+  svg{
+    height: 80px;
+    width: 80px;
+  }
+}
+
+#close{
+  height: 55px;
+  width: 55px;
+  margin-top: 25px;
+  transition: 400ms ease;
+}
+
+#menu{
+  height: 100px;
+  width: 100px;
+  transition: 400ms ease;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  margin-left: 45px;
+  margin-right: 25px;
 }
 
 .navbar.open {
-  background-color: #f3f2e9; /* Change to desired background color when menu is open */
-  
+  background-color: #f3f2e9; 
   .menu-button{
     color: #3d4d25;
+    display: flex;
+    justify-content: end;
   }
 }
 
 .menu-button {
   background-color: transparent;
-  color: white;
   border: none;
   padding: 10px;
   font-size: 18px;
@@ -58,7 +83,7 @@ p, li {
   padding: 0;
   margin: 0;
   overflow: hidden;
-  height: 0;
+  height: -10px;
   transition: height 0.3s ease-out;
   background-color: transparent;
   display: flex;
@@ -67,13 +92,9 @@ p, li {
 }
 
 .menu.open {
-  height: 200px; /* Adjust based on the number of items and their height */
-  background-color: #f3f2e9; /* Change to desired background color when menu is open */
+  height: 200px; 
+  background-color: #f3f2e9;
   transition: height 0.3s ease-in;
-}
-
-.menu li {
-  border-bottom: 1px solid #444;
 }
 
 .menu li a {
@@ -94,7 +115,6 @@ p, li {
   height: 100vh;
   overflow: hidden;
 }
-
 
 .content {
   position: relative;
