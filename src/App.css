@@ -198,4 +198,90 @@ p, li {
 
 
 /*Gifts Page*/
+.gifts{
+  background-color: #3d4d25;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h1{
+    font-family: 'adobe-garamond-pro';
+    font-size: 10em;
+  }
+
+  h1, p{
+    color: #f3f2e9;
+  }
+
+  .registry{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+
+/*RSVP Page*/
+.rsvp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5vw;
+  }
+
+  video{
+    z-index: -1;
+  }
+
+  .photo{
+    position: relative;
+    width: 100%; 
+    max-width: 600px; 
+    margin: auto;
+
+    .img-1, .img-2 {
+      position: absolute;
+      object-fit: cover;
+    }
+
+    .img-1 {
+      width: 60%;
+      left: 0;
+      top: 80px;
+      z-index: 4;
+    }
+
+    .img-2 {
+      width: 90%;
+      left: 20%;
+      top: 0;
+    }
+  }
+
+  .info{
+    background-color: #f3f2e9;
+    color: #3d4d25;
+    padding-left: 70px;
+    padding-bottom: 50px;
+
+    h1{
+      font-family: 'adobe-garamond-pro';
+      font-size: 10em;
+    }
+
+    .sign-in{
+      display: none;
+    }
+  }
+
+}
 
