@@ -247,6 +247,7 @@ p, li {
     width: 100%; 
     max-width: 600px; 
     margin: auto;
+    margin-top: 20px;
 
     .img-1, .img-2 {
       position: absolute;
@@ -269,9 +270,10 @@ p, li {
 
   .info{
     background-color: #f3f2e9;
-    color: #3d4d25;
-    padding-left: 70px;
+    color: #576641;
+    padding-left: 6em;
     padding-bottom: 50px;
+    padding-top: 50px;
 
     h1{
       font-family: 'adobe-garamond-pro';
@@ -280,6 +282,22 @@ p, li {
 
     .sign-in{
       display: none;
+    }
+
+    .verify p{
+      width: 90%;
+      color: #576641;
+    }
+
+    input{
+      background-color: #576641;
+      border-radius: 20px;
+      border: none;
+      font-family:"adobe-garamond-pro";
+      padding: 10px 65px 10px 10px;
+    }
+    ::placeholder {
+      color: #f3f2e9;
     }
   }
 
