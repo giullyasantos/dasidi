@@ -122,7 +122,7 @@ p, li {
   position: relative;
 }
 
-.menu li a:after {    
+.menu li a:after{    
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -135,11 +135,10 @@ p, li {
   width: 0;
 }
 
-.menu li a:hover:after { 
+.menu li a:hover:after, .footer-column a:hover:after { 
   width: 100%; 
   left: 0; 
 }
-
 
 #ds-logo{
   transition: ease 400ms;
@@ -284,9 +283,19 @@ p, li {
       display: none;
     }
 
-    .verify p{
-      width: 90%;
-      color: #576641;
+    .verify {
+      display: flex;
+      flex-direction: column;
+    
+      p{
+        width: 90%;
+        color: #576641;
+      }
+
+      button{
+        margin-top: 1em;
+        width: 30%;
+      }
     }
 
     input{
@@ -299,7 +308,85 @@ p, li {
     ::placeholder {
       color: #f3f2e9;
     }
+  } 
+}
+
+/*Footer Component*/
+
+.footer {
+  background-color: #3d4d25; /* Greenish background */
+  color: #f3f2e9; /* Light text color */
+  padding: 20px;
+  padding-top: 5%;
+  padding-bottom: 2.5%;
+  text-align: center;
+
+  .footer-logo {
+    margin-bottom: 20px;
+  }
+
+  .footer-logo svg {
+    max-width: 100px;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 50px;
+  }
+
+  .footer-column {
+    text-align: left;
+    
+  }
+
+  .footer-column h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #f3f2e9; /* Same color as text */
+    font-weight: normal;
+    font-family:"adobe-garamond-pro";
+  }
+
+  .footer-column a {
+    color: #f3f2e9;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
   }
 
 }
+
+/* Fade-in and fade-out transitions */
+/* Fade-in and fade-out transitions */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(10px); /* Slight lift when entering */
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 700ms ease-in-out, transform 900ms ease-out; /* Slower Y transition with gentle ease-out */
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(10px); /* Slight dip when exiting */
+  transition: opacity 700ms ease-in-out, transform 900ms ease-out; /* Slower Y transition with gentle ease-out */
+}
+
 
