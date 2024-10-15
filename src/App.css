@@ -1,13 +1,16 @@
 /*General*/
 h1 {
-  font-family: "krul";
-  font-size: 4em;
-  font-weight: 50;
+  font-family: "Forum", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5em;
   margin: 0;
 }
 
 p, li {
-  font-family:"adobe-garamond-pro";
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 1.1em;
 }
 
@@ -35,6 +38,10 @@ p, li {
   svg{
     height: 80px;
     width: 80px;
+  }
+
+  li {
+    font-weight: 600;
   }
 }
 
@@ -127,7 +134,7 @@ p, li {
   bottom: 0;
   content: "";
   display: block;
-  height: 1px;
+  height: 0.75px;
   left: 50%;
   position: absolute;
   background: #3d4d25;
@@ -179,11 +186,24 @@ p, li {
   overflow: hidden;
 }
 
+.home-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0; 
+}
+
 .content {
   position: relative;
   z-index: 1;
-  margin-top: 150px;
-  color: white;
+  margin-top: 15em;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: #f3f2e9;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
   text-align: center;
   top: 50%;
   left: 50%;
@@ -206,7 +226,9 @@ p, li {
   text-align: center;
 
   h1{
-    font-family: 'adobe-garamond-pro';
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 10em;
   }
 
@@ -275,7 +297,9 @@ p, li {
     padding-top: 50px;
 
     h1{
-      font-family: 'adobe-garamond-pro';
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 400;
+      font-style: normal;
       font-size: 10em;
     }
 
@@ -302,7 +326,9 @@ p, li {
       background-color: #576641;
       border-radius: 20px;
       border: none;
-      font-family:"adobe-garamond-pro";
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 400;
+      font-style: normal;
       padding: 10px 65px 10px 10px;
     }
     ::placeholder {
@@ -345,8 +371,9 @@ p, li {
     font-size: 15px;
     margin-bottom: 10px;
     color: #f3f2e9; /* Same color as text */
-    font-weight: normal;
-    font-family:"adobe-garamond-pro";
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
   }
 
   .footer-column a {
@@ -365,7 +392,6 @@ p, li {
 
 }
 
-/* Fade-in and fade-out transitions */
 /* Fade-in and fade-out transitions */
 .fade-enter {
   opacity: 0;
@@ -388,5 +414,4 @@ p, li {
   transform: translateY(10px); /* Slight dip when exiting */
   transition: opacity 700ms ease-in-out, transform 900ms ease-out; /* Slower Y transition with gentle ease-out */
 }
-
 

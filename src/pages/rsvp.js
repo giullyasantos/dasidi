@@ -11,8 +11,6 @@ const RSVP = () => {
       <source src={Background} type='video/mp4' />
     </video>
     <div className='container'>
-
-
       <div className='photo'>
         <img className="img-1" src={Image}></img>
         <img className="img-2" src={Image}></img>
