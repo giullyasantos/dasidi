@@ -14,6 +14,10 @@ p, li {
   font-size: 1.1em;
 }
 
+section{
+  height: 100vh;
+}
+
 .background-video {
   position: absolute;
   top: 50%;
@@ -157,7 +161,6 @@ p, li {
 }
 
 @media screen and (max-width: 768px) {
-
   .topbar{
     padding-top: 30px;
   }
@@ -182,18 +185,8 @@ p, li {
 .home-container {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   overflow: hidden;
-}
-
-.home-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0; 
 }
 
 .content {
@@ -337,22 +330,26 @@ p, li {
   } 
 }
 
-/*Footer Component*/
-
+/* Footer Component */
 .footer {
-  background-color: #3d4d25; /* Greenish background */
+  background-color: #3d4d2573; /* Greenish background */
   color: #f3f2e9; /* Light text color */
   padding: 20px;
   padding-top: 5%;
   padding-bottom: 2.5%;
   text-align: center;
+  position: relative;
+  
+  /* Add border-radius for the curve */
+  border-top-left-radius: 50% 300px;
+  border-top-right-radius: 50% 300px;
 
   .footer-logo {
     margin-bottom: 20px;
-  }
 
-  .footer-logo svg {
-    max-width: 100px;
+    svg {
+      max-width: 100px;
+    }
   }
 
   .footer-links {
@@ -364,7 +361,6 @@ p, li {
 
   .footer-column {
     text-align: left;
-    
   }
 
   .footer-column h3 {
@@ -389,8 +385,8 @@ p, li {
     margin-top: 20px;
     font-size: 12px;
   }
-
 }
+
 
 /* Fade-in and fade-out transitions */
 .fade-enter {
