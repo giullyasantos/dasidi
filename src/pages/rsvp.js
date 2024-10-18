@@ -23,7 +23,7 @@ const RSVP = () => {
             <input type='text'  placeholder='Name:'/>
             <input type='text'  placeholder='Name:'/>
           </div>
-          <input type='text'  placeholder='Name:'/>
+          <input type='text'  placeholder='Name: fr'/>
           <input type='text'  placeholder='Name:'/>
           <button>Submit</button>
         </div>
