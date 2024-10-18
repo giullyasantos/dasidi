@@ -1,4 +1,12 @@
 /*General*/
+html{
+  background-color: #3d4d25;
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+  width: 100%; /* Set width to full */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 h1 {
   font-family: "Forum", serif;
   font-weight: 400;
@@ -30,7 +38,6 @@ section{
 }
 
 /*NavBar*/
-/* Style for the navigation bar */
 .navbar {
   position: fixed;
   top: 0;
@@ -211,7 +218,6 @@ section{
 
 /*Gifts Page*/
 .gifts{
-  background-color: #3d4d25;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -355,12 +361,19 @@ section{
   .footer-links {
     display: flex;
     justify-content: center;
+    flex-direction: row;
     gap: 50px;
     margin-bottom: 50px;
   }
 
   .footer-column {
     text-align: left;
+  }
+
+  .footer-row{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
   }
 
   .footer-column h3 {
@@ -370,6 +383,7 @@ section{
     font-family: "Cormorant Garamond", serif;
     font-weight: 400;
     font-style: normal;
+    cursor: default;
   }
 
   .footer-column a {
@@ -379,11 +393,49 @@ section{
     letter-spacing: 0.5px;
     display: block;
     margin-bottom: 5px;
+    transition: all 400ms ease;
+  }
+
+  .footer-column a:hover {
+    font-size: 11.25px;
+    opacity: 70%;
   }
 
   .footer-bottom {
     margin-top: 20px;
     font-size: 12px;
+
+    a{
+      text-decoration: underline;
+    }
+
+    a:active, a:focus{
+      color: inherit;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+	.footer-logo svg {
+    width: 8vh;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.footer{
+    .footer-links {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 5px;
+    }
+    .footer-column{
+      text-align: center;
+      width: 7em;
+    }
+    .footer-row{
+      gap: 10px;
+    }
   }
 }
 

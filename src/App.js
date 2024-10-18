@@ -14,6 +14,8 @@ import Footer from './components/footer';
 
 import couple from './media/hero.png';
 import coupleMobile from './media/hugging.jpg';
+import giftsMobile from './media/giftsMobile.JPG';
+import giftsDesktop from './media/giftsDesktop.JPG';
 import videoBackground from './media/movingbackground.mp4'
 
 const App = () => {
@@ -27,14 +29,17 @@ const App = () => {
 const Main = () => {
   const location = useLocation();
   const [backgroundImage, setBackgroundImage] = useState(couple);
+  const [giftsImage, setGiftImage] = useState(giftsDesktop);
 
   useEffect(() => {
     const handleResize = () => {
       // Adjust the background based on screen size
       if (window.innerWidth <= 768) {
         setBackgroundImage(coupleMobile);
+        setGiftImage(giftsMobile);
       } else {
         setBackgroundImage(couple);
+        setGiftImage(giftsDesktop);
       }
     };
 
@@ -58,7 +63,7 @@ const Main = () => {
   
       // Set different backgrounds for other pages
       if (location.pathname === '/gifts') {
-        html.style.backgroundImage = 'url(/path/to/gifts.jpg)';
+        html.style.backgroundImage = `url(${giftsImage})`;
         html.style.backgroundSize = 'cover';
         html.style.backgroundPosition = 'center';
         html.style.backgroundRepeat = 'no-repeat';

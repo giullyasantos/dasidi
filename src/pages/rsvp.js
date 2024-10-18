@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import Image from '../media/SaveTheDate.png'
+import Image from '../media/Tezza-5068.jpg'
+import Image2 from '../media/Tezza-5983.jpg'
 
 const RSVP = () => {
   const [invitation, setInvitationValue] = useState('');
@@ -8,8 +9,7 @@ const RSVP = () => {
   return <div className='rsvp'>
     <div className='container'>
       <div className='photo'>
-        <img className="img-1" src={Image}></img>
-        <img className="img-2" src={Image}></img>
+        <img className="img-2" src={Image2}></img>
       </div>
       <div className='info'>
       <h1>RSVP</h1>
