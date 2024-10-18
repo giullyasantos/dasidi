@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import '../App.css'; // Import the CSS file for styling
-import couple from '../media/hero.png';
-import coupleMobile from '../media/hugging.jpg';
-
 
 const Home = () => {
   
